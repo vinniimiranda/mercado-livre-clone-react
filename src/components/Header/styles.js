@@ -4,10 +4,14 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 87px;
   background-color: #fff159;
   padding: 0.3rem 1rem;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+
+  @media (min-width: 1024px) {
+    height: 100px;
+  }
 `;
 
 export const Content = styled.div`
@@ -15,12 +19,12 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     width: 100%;
   }
 
   @media (min-width: 1200px) {
-    width: 88%;
+    width: 95%;
   }
   @media (min-width: 1450px) {
     width: 78%;
@@ -45,24 +49,30 @@ export const TopHeader = styled.div`
 `;
 
 export const Logo = styled.div`
-  background: url('https://http2.mlstatic.com/ui/navigation/5.3.7/mercadolibre/logo-pt__large_plus.png');
+  @media (max-width: 1024px) {
+    background: url('https://http2.mlstatic.com/ui/navigation/5.3.7/mercadolibre/logo__small.png')
+      no-repeat;
+    width: 39px;
+    height: 28px;
+  }
+  background: url('https://http2.mlstatic.com/ui/navigation/5.3.7/mercadolibre/logo-pt__large_plus.png')
+    no-repeat;
   height: 34px;
   top: 11px;
+
   width: 134px;
 `;
 
 export const SearchInput = styled.div`
   padding: 4px 1px;
   overflow: auto;
-
+  flex-direction: row-reverse;
   display: flex;
   flex: 1;
   justify-content: space-between;
   margin: 0 2rem;
   overflow: hidden;
   background-color: #fff;
-  box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
 
   input {
     outline: none;
@@ -79,17 +89,31 @@ export const SearchInput = styled.div`
 
   button {
     border: none;
-    height: 30px;
+    height: 25px;
     outline: none;
     background-color: #fff;
-    border-left: 1px solid #ccc;
     padding: 0.3rem 0.7rem;
+
+    @media (min-width: 1024px) {
+      flex-direction: row-reverse;
+      border-left: 1px solid #ccc;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.1);
+
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
   }
 `;
 
 export const AppImage = styled.img`
   width: 350px;
   cursor: pointer;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const BottomHeader = styled.div`
@@ -105,20 +129,40 @@ export const Location = styled.div`
 
 export const AddressInfo = styled.div`
   display: flex;
-  flex-direction: column;
   padding-left: 3px;
 
+  align-items: baseline;
   small {
     color: #666;
     font-size: 11px;
   }
 
   span {
-    font-size: 13px;
+    font-size: 11px;
+    margin-left: 5px;
+    color: #666;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    small {
+      color: #666;
+      font-size: 11px;
+    }
+
+    span {
+      font-size: 12px;
+      margin-left: 0px;
+    }
   }
 `;
 
 export const NavMenu = styled.ul`
+  @media (max-width: 1024px) {
+    display: none;
+  }
   display: flex;
   justify-content: space-between;
   /* flex: 1; */
@@ -139,6 +183,9 @@ export const NavMenuItem = styled.li`
 `;
 
 export const RightMenu = styled.ul`
+  @media (max-width: 1024px) {
+    display: none;
+  }
   display: flex;
   justify-content: space-around;
   list-style: none;
