@@ -7,7 +7,7 @@ export const Container = styled.div`
   position: absolute;
   width: 100%;
   max-height: 340px;
-  height: 100%;
+  /* height: 100%; */
   button {
     visibility: hidden;
   }
@@ -20,8 +20,11 @@ export const Container = styled.div`
 `;
 
 export const SliderImage = styled.div`
+  /* width: 100%; */
+  max-height: 340px;
   img {
     max-height: 340px;
+    width: 100%;
     height: 100%;
   }
 `;
@@ -48,9 +51,6 @@ export const ArrowButton = styled.button`
 
 export const Dots = styled.div`
   position: absolute;
-
-  width: 200px;
-  height: 10px;
   bottom: 10px;
   display: flex;
   align-items: center;
