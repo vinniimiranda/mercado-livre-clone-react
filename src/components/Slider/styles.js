@@ -37,8 +37,9 @@ export const ArrowButton = styled.button`
   align-items: center;
   height: 80px;
   background: #fff;
+
   width: 40px;
-  border-radius: 5px;
+  border-radius: 2px;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
   &:hover {
     box-shadow: 0 7px 16px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
@@ -56,8 +57,8 @@ export const Dots = styled.div`
 `;
 
 export const Dot = styled.div`
-  width: 10px
-  height: 10px
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: ${props => (props.selected ? '#fff' : '#ccc')};
   opacity: ${props => (props.selected ? '1' : '0.8')};
@@ -66,6 +67,4 @@ export const Dot = styled.div`
   cursor: pointer;
   transition: transform ease 0.3s;
   transform: ${props => (props.selected ? 'scalte(1)' : 'scale(0.5)')};
-  
-
 `;

@@ -60,11 +60,11 @@ export const Logo = styled.div`
   height: 34px;
   top: 11px;
 
-  width: 134px;
+  width: 15%;
 `;
 
 export const SearchInput = styled.div`
-  padding: 4px 1px;
+  padding: 6px 1px;
   overflow: auto;
   flex-direction: row-reverse;
   display: flex;
@@ -73,7 +73,9 @@ export const SearchInput = styled.div`
   margin: 0 2rem;
   overflow: hidden;
   background-color: #fff;
+  border-radius: 2px;
 
+  width: 85%;
   input {
     outline: none;
     border: none;
@@ -103,13 +105,11 @@ export const SearchInput = styled.div`
   @media (min-width: 1024px) {
     flex-direction: row;
     box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.1);
-
-    /* border: 1px solid rgba(0, 0, 0, 0.1); */
   }
 `;
 
 export const AppImage = styled.img`
-  width: 350px;
+  width: 340px;
   cursor: pointer;
   @media (max-width: 1024px) {
     display: none;
@@ -119,28 +119,33 @@ export const AppImage = styled.img`
 export const BottomHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 `;
 
 export const Location = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  width: 15%;
 `;
 
 export const AddressInfo = styled.div`
   display: flex;
   padding-left: 3px;
+  width: 100%;
 
   align-items: baseline;
   small {
-    color: #666;
+    color: rgba(51, 51, 51, 0.6);
     font-size: 11px;
   }
 
   span {
     font-size: 11px;
     margin-left: 5px;
-    color: #666;
+    color: rgba(51, 51, 51, 0.6);
   }
 
   @media (min-width: 1024px) {
@@ -148,13 +153,14 @@ export const AddressInfo = styled.div`
     align-items: flex-start;
 
     small {
-      color: #666;
+      color: rgba(51, 51, 51, 0.6);
       font-size: 11px;
     }
 
     span {
       font-size: 12px;
       margin-left: 0px;
+      color: rgba(51, 51, 51, 0.9);
     }
   }
 `;
@@ -163,22 +169,28 @@ export const NavMenu = styled.ul`
   @media (max-width: 1024px) {
     display: none;
   }
+  flex: 1;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* flex: 1; */
   list-style: none;
-  margin: 0 2rem;
+  margin: 0 2rem 0 2rem;
+  width: 85%;
 `;
 
 export const NavMenuItem = styled.li`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin: 0 0.5rem;
+  cursor: pointer;
   span {
-    font-size: 13px;
+    font-size: 12px;
     margin-right: 3px;
-    color: #666;
+    color: rgba(51, 51, 51, 0.6);
+    &:hover {
+      color: #000;
+    }
   }
 `;
 
@@ -195,9 +207,14 @@ export const RightMenuItem = styled.li`
   margin: 0 0.5rem;
   display: flex;
   align-items: center;
+  cursor: pointer;
   span {
-    font-size: 13px;
+    font-size: 12px;
     margin-right: 3px;
-    color: #666;
+    color: rgba(51, 51, 51, 0.6);
+
+    &:hover {
+      color: #000;
+    }
   }
 `;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
 import { Container, SliderImage, ArrowButton, Dots, Dot } from './styles';
 
@@ -31,13 +31,13 @@ export default function Slider() {
   return (
     <Container>
       <ArrowButton left onClick={backPosition}>
-        <FaChevronLeft size={25} color="#3483fa" />
+        <MdChevronLeft size={35} color="#3483fa" />
       </ArrowButton>
       <SliderImage>
         <img alt="1" src={images[postion]} />
       </SliderImage>
       <ArrowButton onClick={nextPosition}>
-        <FaChevronRight size={25} color="#3483fa" />
+        <MdChevronRight size={35} color="#3483fa" />
       </ArrowButton>
 
       <Dots>
