@@ -56,8 +56,8 @@ export const Dots = styled.div`
 `;
 
 export const Dot = styled.div`
-  width: 12px
-  height: 12px
+  width: 10px
+  height: 10px
   border-radius: 50%;
   background: ${props => (props.selected ? '#fff' : '#ccc')};
   opacity: ${props => (props.selected ? '1' : '0.8')};
