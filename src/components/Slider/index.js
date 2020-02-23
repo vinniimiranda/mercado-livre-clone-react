@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
-import { Container, SliderImage, ArrowButton } from './styles';
+import { Container, SliderImage, ArrowButton, Dots, Dot } from './styles';
 
 export default function Slider() {
   const [postion, setPosition] = useState(0);
@@ -15,7 +15,7 @@ export default function Slider() {
 
   function nextPosition() {
     if (postion === images.length - 1) {
-      setPosition(1);
+      setPosition(0);
     } else {
       setPosition(postion + 1);
     }
@@ -39,6 +39,15 @@ export default function Slider() {
       <ArrowButton onClick={nextPosition}>
         <FaChevronRight size={25} color="#3483fa" />
       </ArrowButton>
+
+      <Dots>
+        {images.map((image, index) => (
+          <Dot
+            selected={postion === index}
+            onClick={() => setPosition(index)}
+          />
+        ))}
+      </Dots>
     </Container>
   );
 }
