@@ -39,15 +39,23 @@ export default function Slider() {
       <ArrowButton onClick={nextPosition}>
         <MdChevronRight size={35} color="#3483fa" />
       </ArrowButton>
+      <div
+        style={{
+          position: 'absolute',
 
-      <Dots>
-        {images.map((image, index) => (
-          <Dot
-            selected={postion === index}
-            onClick={() => setPosition(index)}
-          />
-        ))}
-      </Dots>
+          alignSelf: 'flex-end',
+          paddingBottom: 10,
+        }}
+      >
+        <Dots>
+          {images.map((image, index) => (
+            <Dot
+              selected={postion === index}
+              onClick={() => setPosition(index)}
+            />
+          ))}
+        </Dots>
+      </div>
     </Container>
   );
 }

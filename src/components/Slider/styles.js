@@ -4,10 +4,10 @@ export const Container = styled.div`
   display: flex;
   flex: 1;
   justify-content: center;
-  position: absolute;
+
   width: 100%;
   max-height: 340px;
-  /* height: 100%; */
+
   button {
     visibility: hidden;
   }
@@ -50,7 +50,8 @@ export const ArrowButton = styled.button`
 `;
 
 export const Dots = styled.div`
-  position: absolute;
+  /* position: absolute; */
+
   bottom: 10px;
   display: flex;
   align-items: center;
