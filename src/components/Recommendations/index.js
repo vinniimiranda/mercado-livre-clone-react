@@ -9,24 +9,25 @@ import {
   Detail,
 } from './styles';
 
-export default function History() {
+export default function Recommendations({
+  title,
+  linkTitle = 'Ver histórico',
+  imageLink = 'https://http2.mlstatic.com/D_Q_NP_787753-MLB40815769569_022020-AB.webp',
+}) {
   const products = [0, 1, 2, 4, 5];
 
   return (
     <Container>
       <Content>
         <Title>
-          <h2>Baseada na sua última visita</h2>
-          <a>Ver histórico</a>
+          <h2>{title}</h2>
+          <a>{linkTitle}</a>
         </Title>
 
         <ProductList>
           {products.map(product => (
             <Product key={product}>
-              <img
-                src="https://http2.mlstatic.com/D_Q_NP_787753-MLB40815769569_022020-AB.webp"
-                alt="image"
-              />
+              <img src={imageLink} alt={imageLink} />
               <span>R$ 133</span>
               <small>12x R$ 12,71</small>
 

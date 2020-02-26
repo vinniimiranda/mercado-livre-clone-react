@@ -5,20 +5,31 @@ export const Container = styled.div`
   flex: 1;
   overflow: hidden;
   align-items: center;
+  @media (max-width: 1120px) {
+    width: 100%;
+  }
 `;
 export const Content = styled.div`
   background: #fff;
   margin: 1rem 2rem;
   border-radius: 3px;
-  padding: 0.6rem 0.5rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
 
+  padding: 0.2rem;
+  @media (max-width: 970px) {
+    padding: 1rem;
+  }
   @media (max-width: 600px) {
     max-width: 420px;
+    margin: 1rem;
+  }
+
+  @media (max-width: 1120px) {
+    width: 100%;
   }
 `;
 export const FirstContent = styled.div`
@@ -26,9 +37,10 @@ export const FirstContent = styled.div`
   border-right: 1px solid #ddd;
   padding: 1rem;
   display: flex;
-  flex: 1;
+
   flex-direction: column;
-  margin: 0 2rem 0 0;
+  margin: 0 1rem 0 0;
+  white-space: nowrap;
   span {
     font-size: 16px;
   }
@@ -37,21 +49,29 @@ export const FirstContent = styled.div`
     color: #999;
     font-size: 12px;
   }
+
+  @media (max-width: 970px) {
+    display: none;
+  }
 `;
 export const SecondContent = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 2rem;
+  margin-right: 1rem;
 `;
 export const ThirdContent = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 2rem;
+  margin-right: 1rem;
 `;
 export const FourthContent = styled.div`
-  display: flex;
   align-items: center;
   margin-right: 2rem;
+  display: none;
+
+  @media (min-width: 1120px) {
+    display: flex;
+  }
 `;
 
 export const Round = styled.div`
@@ -69,7 +89,9 @@ export const Info = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 0.5rem;
+
   span {
+    white-space: nowrap;
     font-size: 16px;
   }
   a {
