@@ -132,7 +132,7 @@ export const Product = styled.li`
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
-  transition: height ease-in 0.15s;
+  transition: height ease 0.15s;
   img {
     border-bottom: 1px solid #eee;
     padding: 0 1rem;
