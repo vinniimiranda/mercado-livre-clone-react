@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 
+import { MdChevronRight } from 'react-icons/md';
 import {
   Container,
   Content,
@@ -7,6 +8,7 @@ import {
   ProductList,
   Product,
   Detail,
+  NextButton,
 } from './styles';
 
 export default function Recommendations({
@@ -14,8 +16,32 @@ export default function Recommendations({
   linkTitle = 'Ver histórico',
   imageLink = 'https://http2.mlstatic.com/D_Q_NP_787753-MLB40815769569_022020-AB.webp',
 }) {
-  const products = [0, 1, 2, 4, 5];
-
+  const products = [
+    0,
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    0,
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+  ];
+  const [x, setX] = useState(0);
+  function next() {
+    setX(x + 103);
+  }
   return (
     <Container>
       <Content>
@@ -24,7 +50,7 @@ export default function Recommendations({
           <a>{linkTitle}</a>
         </Title>
 
-        <ProductList>
+        <ProductList x={x}>
           {products.map(product => (
             <Product key={product}>
               <img src={imageLink} alt={imageLink} />
@@ -38,6 +64,9 @@ export default function Recommendations({
           ))}
         </ProductList>
       </Content>
+      <NextButton onClick={next}>
+        <MdChevronRight size={40} color="3483FA" />
+      </NextButton>
     </Container>
   );
 }

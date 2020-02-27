@@ -4,19 +4,22 @@ export const Container = styled.div`
   display: flex;
   flex: 1;
   align-items: center;
-  height: 100%;
+  height: 360px;
+  width: 1230px;
+  align-self: center;
+  margin-left: 2rem;
+  overflow: hidden;
 `;
 
 export const Content = styled.div`
   margin: 1rem 2rem;
   border-radius: 3px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
-  width: 100%;
-
+  width: 500%;
+  overflow: hidden;
   @media (max-width: 425px) {
     margin: 1rem;
   }
@@ -39,17 +42,21 @@ export const Title = styled.div`
 `;
 
 export const ProductList = styled.ul`
+  position: relative;
+  flex: 1;
+  left: 0;
+  width: 100%;
+  transform: translateX(-${props => props.x}%);
+  transition: transform ease 0.9s;
+
   flex: 1;
   align-self: flex-start;
   margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
+  display: flex;
   height: 330px;
-  overflow: hidden;
+  z-index: 1;
 
-  @media (max-width: 1200px) {
+  /* @media (max-width: 1200px) {
     max-width: 1050px;
   }
 
@@ -66,7 +73,7 @@ export const ProductList = styled.ul`
 
   @media (max-width: 375px) {
     max-width: 200px;
-  }
+  } */
 `;
 
 export const Detail = styled.div`
@@ -85,12 +92,15 @@ export const Detail = styled.div`
 `;
 
 export const Product = styled.li`
+  position: relative;
+  left: 0;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   width: 210px;
-  height: 300px;
-  padding: 1rem 0;
+  min-width: 210px;
+  height: 250px;
+  margin: 0 1rem 0 0;
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
@@ -116,10 +126,28 @@ export const Product = styled.li`
 
   &:hover {
     box-shadow: 0 1px 8px 2px rgba(0, 0, 0, 0.1);
-    height: 323px;
+    height: 313px;
     ${Detail} { 
       visibility: visible;
       
     }
   }
+`;
+
+export const NextButton = styled.button`
+  width: 64px;
+  min-width: 64px;
+  height: 64px;
+  display: flex;
+  background-color: #fff;
+  border-radius: 50%;
+  border-width: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  outline: 0;
+  position: relative;
+  right: 64px;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
 `;
