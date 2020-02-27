@@ -4,14 +4,17 @@ export const Container = styled.div`
   display: flex;
   flex: 1;
   overflow: hidden;
+  justify-content: center;
   align-items: center;
+  align-self: center;
+  padding-right: 3rem;
   @media (max-width: 1120px) {
     width: 100%;
   }
 `;
 export const Content = styled.div`
   background: #fff;
-  margin: 1rem 2rem;
+  margin: 1rem 1rem;
   border-radius: 3px;
 
   display: flex;
